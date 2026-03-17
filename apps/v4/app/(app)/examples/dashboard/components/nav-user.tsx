@@ -3,8 +3,10 @@
 import {
   IconCreditCard,
   IconDotsVertical,
+  IconLock,
   IconLogout,
   IconNotification,
+  IconSettings,
   IconUserCircle,
 } from "@tabler/icons-react"
 
@@ -95,6 +97,14 @@ export function NavUser({
               <DropdownMenuItem>
                 <IconNotification />
                 Notifications
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <IconLock />
+                MFA Settings
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <IconSettings />
+                Security Settings
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />

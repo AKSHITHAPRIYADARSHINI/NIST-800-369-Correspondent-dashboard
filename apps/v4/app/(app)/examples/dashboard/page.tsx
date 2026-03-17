@@ -10,8 +10,6 @@ import { DataTable } from "@/app/(app)/examples/dashboard/components/data-table"
 import { SectionCards } from "@/app/(app)/examples/dashboard/components/section-cards"
 import { SiteHeader } from "@/app/(app)/examples/dashboard/components/site-header"
 
-import data from "./data.json"
-
 export default function Page() {
   return (
     <>
@@ -52,7 +50,7 @@ export default function Page() {
                 <div className="px-4 lg:px-6">
                   <ChartAreaInteractive />
                 </div>
-                <DataTable data={data} />
+                <DataTable />
               </div>
             </div>
           </div>

@@ -126,16 +126,29 @@ const nextConfig = {
     ]
   },
   rewrites() {
-    return [
-      {
-        source: "/docs/:path*.md",
-        destination: "/llm/:path*",
-      },
-      {
-        source: "/init.md",
-        destination: "/init/md",
-      },
-    ]
+    return {
+      beforeFiles: [
+        {
+          source: "/dashboard/compliance",
+          destination: "/compliance",
+        },
+        {
+          source: "/dashboard",
+          destination: "/security-leadership-dashboard",
+        },
+      ],
+      afterFiles: [
+        {
+          source: "/docs/:path*.md",
+          destination: "/llm/:path*",
+        },
+        {
+          source: "/init.md",
+          destination: "/init/md",
+        },
+      ],
+      fallback: [],
+    }
   },
 }
 
