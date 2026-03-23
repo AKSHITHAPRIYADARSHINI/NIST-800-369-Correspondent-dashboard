@@ -129,6 +129,18 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
+          source: "/dashboard/admin-access",
+          destination: "/admin-access",
+        },
+        {
+          source: "/dashboard/tickets",
+          destination: "/tickets",
+        },
+        {
+          source: "/dashboard/incidents",
+          destination: "/incidents",
+        },
+        {
           source: "/dashboard/compliance",
           destination: "/compliance",
         },
