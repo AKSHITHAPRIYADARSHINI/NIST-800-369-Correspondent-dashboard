@@ -70,13 +70,18 @@ function buildFallbackSeries(anchorDate: Date, days = 90): SecurityPosturePoint[
   return points
 }
 
+function getUploadedCsvTimelineData(): SecurityPosturePoint[] | null {
+  // TODO(api): hydrate this from uploaded CSV timeline endpoint.
+  return null
+}
+
 function getSecurityPostureSeries(): SecurityPosturePoint[] {
   const now = new Date()
 
   // TODO(api): Replace mock security posture series with enrollment-date
   // or uploaded CSV-driven timeline data.
   const onboardingDate: Date | null = null
-  const uploadedCsvTimelineData: SecurityPosturePoint[] | null = null
+  const uploadedCsvTimelineData = getUploadedCsvTimelineData()
 
   if (uploadedCsvTimelineData?.length) {
     return uploadedCsvTimelineData

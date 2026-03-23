@@ -1,6 +1,8 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
   IconChartBar,
   IconDashboard,
@@ -51,19 +53,43 @@ type DocumentItem = {
 }
 
 const navMain: NavItem[] = [
-  { title: "Dashboard", icon: IconDashboard, url: "/dashboard" },
-  { title: "Security Overview", icon: IconShieldCheck, url: "/dashboard" },
-  { title: "Compliance", icon: IconChartBar, url: "/dashboard/compliance" },
-  { title: "Incidents", icon: IconListDetails, url: "#" },
-  { title: "Tickets", icon: IconSquareCheck, url: "#" },
-  { title: "Admin Access", icon: IconUsers, url: "#" },
+  {
+    title: "Dashboard",
+    icon: IconDashboard,
+    url: "/security-leadership-dashboard",
+  },
+  {
+    title: "Security Overview",
+    icon: IconShieldCheck,
+    url: "/security-leadership-dashboard",
+  },
+  { title: "Compliance", icon: IconChartBar, url: "/compliance" },
+  { title: "Incidents", icon: IconListDetails, url: "/incidents" },
+  { title: "Tickets", icon: IconSquareCheck, url: "/tickets" },
+  { title: "Admin Access", icon: IconUsers, url: "/admin-access" },
 ]
 
 const documents: DocumentItem[] = [
-  { name: "Files", icon: IconDatabase, url: "#" },
-  { name: "Policies", icon: IconFileDescription, url: "#" },
-  { name: "Reports", icon: IconReport, url: "#" },
-  { name: "Audit History", icon: IconFileWord, url: "#" },
+  {
+    name: "Files",
+    icon: IconDatabase,
+    url: "/security-leadership-dashboard/files",
+  },
+  {
+    name: "Policies",
+    icon: IconFileDescription,
+    url: "/security-leadership-dashboard/policies",
+  },
+  {
+    name: "Reports",
+    icon: IconReport,
+    url: "/security-leadership-dashboard/reports",
+  },
+  {
+    name: "Audit History",
+    icon: IconFileWord,
+    url: "/security-leadership-dashboard/audit-history",
+  },
 ]
 
 const account: NavItem[] = [
@@ -75,6 +101,13 @@ const account: NavItem[] = [
 export function DashboardSidebar(
   props: React.ComponentProps<typeof Sidebar>
 ) {
+  const pathname = usePathname()
+
+  const isRouteActive = React.useCallback(
+    (url: string) => pathname === url || pathname.startsWith(`${url}/`),
+    [pathname]
+  )
+
   return (
     <Sidebar collapsible="icon" variant="sidebar" {...props}>
       <SidebarHeader className="border-b">
@@ -99,11 +132,15 @@ export function DashboardSidebar(
             <SidebarMenu>
               {navMain.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton tooltip={item.title} asChild>
-                    <a href={item.url}>
+                  <SidebarMenuButton
+                    tooltip={item.title}
+                    isActive={isRouteActive(item.url)}
+                    asChild
+                  >
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -116,11 +153,11 @@ export function DashboardSidebar(
           <SidebarMenu>
             {documents.map((item) => (
               <SidebarMenuItem key={item.name}>
-                <SidebarMenuButton asChild>
-                  <a href={item.url}>
+                <SidebarMenuButton isActive={isRouteActive(item.url)} asChild>
+                  <Link href={item.url}>
                     <item.icon />
                     <span>{item.name}</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
