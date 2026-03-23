@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter=shadcn build && pnpm icons:dev & next dev --turbopack --port 4000",
+    "dev": "pnpm --filter=shadcn build && next dev --turbopack --port 4000",
+    "dev:icons": "pnpm icons:dev",
     "build": "pnpm --filter=shadcn build && next build",
     "start": "next start --port 4000",
     "preview": "pnpm --filter=shadcn build && next build && next start --port 4000",
