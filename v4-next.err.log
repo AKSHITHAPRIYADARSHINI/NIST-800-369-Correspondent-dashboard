@@ -1,0 +1,95 @@
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\akshi\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\akshi\ui\pnpm-lock.yaml
+
+⨯ ./ui/apps/v4/components/admin/security-activity-feed.tsx
+Reading source code for parsing failed
+An unexpected error happened while trying to read the source code to parse: failed to convert rope into string
+
+Caused by:
+- invalid utf-8 sequence of 1 bytes from index 1105
+
+Import traces:
+  Client Component Browser:
+    ./ui/apps/v4/components/admin/security-activity-feed.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/security-operations/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./ui/apps/v4/components/admin/security-activity-feed.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/security-operations/page.tsx [Server Component]
+
+
+
+./ui/apps/v4/components/admin/workbench-tabs.tsx
+Reading source code for parsing failed
+An unexpected error happened while trying to read the source code to parse: failed to convert rope into string
+
+Caused by:
+- invalid utf-8 sequence of 1 bytes from index 1901
+
+Import traces:
+  Client Component Browser:
+    ./ui/apps/v4/components/admin/workbench-tabs.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/security-operations/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./ui/apps/v4/components/admin/workbench-tabs.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/security-operations-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/security-operations/page.tsx [Server Component]
+
+
+⨯ ./ui/apps/v4/components/admin/notes-evidence-log.tsx
+Reading source code for parsing failed
+An unexpected error happened while trying to read the source code to parse: failed to convert rope into string
+
+Caused by:
+- invalid utf-8 sequence of 1 bytes from index 2042
+
+Import traces:
+  Client Component Browser:
+    ./ui/apps/v4/components/admin/notes-evidence-log.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/compliance/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./ui/apps/v4/components/admin/notes-evidence-log.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/compliance/page.tsx [Server Component]
+
+
+
+./ui/apps/v4/components/admin/policy-linkage-card.tsx
+Reading source code for parsing failed
+An unexpected error happened while trying to read the source code to parse: failed to convert rope into string
+
+Caused by:
+- invalid utf-8 sequence of 1 bytes from index 844
+
+Import traces:
+  Client Component Browser:
+    ./ui/apps/v4/components/admin/policy-linkage-card.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Client Component Browser]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/compliance/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./ui/apps/v4/components/admin/policy-linkage-card.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Client Component SSR]
+    ./ui/apps/v4/components/admin/admin-compliance-page.tsx [Server Component]
+    ./ui/apps/v4/app/admin-dashboard/compliance/page.tsx [Server Component]
+
+
+RangeError: Invalid count value: -1
+    at String.repeat (<anonymous>)

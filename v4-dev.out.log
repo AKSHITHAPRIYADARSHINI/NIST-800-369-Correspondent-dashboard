@@ -1,0 +1,53 @@
+
+> ui@0.0.1 v4:dev C:\Users\akshi\ui
+> pnpm --filter=v4 dev
+
+
+> v4@0.1.0 dev C:\Users\akshi\ui\apps\v4
+> pnpm --filter=shadcn build && pnpm icons:dev & next dev --turbopack --port 4000
+
+
+> shadcn@4.0.8 build C:\Users\akshi\ui\packages\shadcn
+> tsup
+
+[34mCLI[39m Building entry: src/index.ts, src/icons/index.ts, src/mcp/index.ts, src/preset/index.ts, src/registry/index.ts, src/schema/index.ts, src/utils/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.0
+[34mCLI[39m Using tsup config: C:\Users\akshi\ui\packages\shadcn\tsup.config.ts
+[34mCLI[39m Target: esnext
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mDTS[39m Build start
+[32mESM[39m [1mdist\preset\index.js   [22m[32m408.00 B[39m
+[32mESM[39m [1mdist\icons\index.js    [22m[32m53.00 B[39m
+[32mESM[39m [1mdist\chunk-ISTYEIAA.js [22m[32m2.10 KB[39m
+[32mESM[39m [1mdist\mcp\index.js      [22m[32m162.00 B[39m
+[32mESM[39m [1mdist\schema\index.js   [22m[32m703.00 B[39m
+[32mESM[39m [1mdist\chunk-HW2MEAJZ.js [22m[32m5.37 KB[39m
+[32mESM[39m [1mdist\registry\index.js [22m[32m582.00 B[39m
+[32mESM[39m [1mdist\utils\index.js    [22m[32m8.13 KB[39m
+[32mESM[39m [1mdist\chunk-JPE2JKEP.js [22m[32m11.16 KB[39m
+[32mESM[39m [1mdist\chunk-2QWB2ZQC.js [22m[32m55.48 KB[39m
+[32mESM[39m [1mdist\chunk-CHWMSXYA.js [22m[32m1.00 KB[39m
+[32mESM[39m [1mdist\chunk-DIKCRF5U.js [22m[32m72.47 KB[39m
+[32mESM[39m [1mdist\index.js          [22m[32m107.09 KB[39m
+[32mESM[39m ⚡️ Build success in 742ms
+[32mDTS[39m ⚡️ Build success in 30259ms
+[32mDTS[39m [1mdist\icons\index.d.ts         [22m[32m1.94 KB[39m
+[32mDTS[39m [1mdist\mcp\index.d.ts           [22m[32m1.01 KB[39m
+[32mDTS[39m [1mdist\preset\index.d.ts        [22m[32m2.33 KB[39m
+[32mDTS[39m [1mdist\registry\index.d.ts      [22m[32m4.00 KB[39m
+[32mDTS[39m [1mdist\utils\index.d.ts         [22m[32m1.29 KB[39m
+[32mDTS[39m [1mdist\index.d.ts               [22m[32m37.70 KB[39m
+[32mDTS[39m [1mdist\schema\index.d.ts        [22m[32m163.84 KB[39m
+[32mDTS[39m [1mdist\get-config-D6gTsP_D.d.ts [22m[32m150.00 B[39m
+
+> v4@0.1.0 icons:dev C:\Users\akshi\ui\apps\v4
+> tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-icons.ts --watch
+
+✓ Generated icon files:
+  - Lucide: 157 icons
+  - Tabler Icons: 157 icons
+  - HugeIcons: 159 icons
+  - Phosphor Icons: 133 icons
+  - Remix Icon: 133 icons
